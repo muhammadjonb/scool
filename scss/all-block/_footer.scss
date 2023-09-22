@@ -1,0 +1,46 @@
+footer{
+    background-color: #333A44;
+    padding: 35px 0;
+}
+.footer{
+    @include flex-container;
+    justify-content: space-between;
+}
+.footer__left{
+    @include flex-container;
+    gap: 60px;
+    ul{
+        @include flex-container;
+        gap: 40px;
+    }
+    li{
+        list-style: none;
+        a{
+            text-decoration: none;
+            color: $description-color;
+            &:hover{
+                color: $primery-color;
+            }    
+        }
+    }
+}
+.footer__icons{
+    @include flex-container;
+    gap: 24px;
+    a{
+        list-style: none;
+        color: $some-color;
+        ion-icon{
+            font-size: 28px;
+        }
+    }
+}
+@include for-tablet{
+    .footer{
+        flex-direction: column;
+        gap: 40px;
+    }
+    .footer__left{
+        flex-direction: column;
+    }
+}
